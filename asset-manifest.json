@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/GDL002-burger-queen/static/css/main.2cce8147.chunk.css",
+    "main.js": "/GDL002-burger-queen/static/js/main.adccf0f9.chunk.js",
+    "main.js.map": "/GDL002-burger-queen/static/js/main.adccf0f9.chunk.js.map",
+    "runtime~main.js": "/GDL002-burger-queen/static/js/runtime~main.2601196f.js",
+    "runtime~main.js.map": "/GDL002-burger-queen/static/js/runtime~main.2601196f.js.map",
+    "static/js/2.b41502e9.chunk.js": "/GDL002-burger-queen/static/js/2.b41502e9.chunk.js",
+    "static/js/2.b41502e9.chunk.js.map": "/GDL002-burger-queen/static/js/2.b41502e9.chunk.js.map",
+    "index.html": "/GDL002-burger-queen/index.html",
+    "precache-manifest.41597a4828682ddf3a1f38823628affe.js": "/GDL002-burger-queen/precache-manifest.41597a4828682ddf3a1f38823628affe.js",
+    "service-worker.js": "/GDL002-burger-queen/service-worker.js",
+    "static/css/main.2cce8147.chunk.css.map": "/GDL002-burger-queen/static/css/main.2cce8147.chunk.css.map",
+    "static/media/logo.svg": "/GDL002-burger-queen/static/media/logo.5d5d9eef.svg"
+  }
+}
