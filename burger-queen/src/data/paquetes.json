@@ -1,0 +1,20 @@
+[{
+    "item": "De litro",
+    "price": 250,
+    "id":"liter"
+    },
+    {
+    "item": "Familiar",
+    "price": 250,
+    "id":"familiar"
+    },
+    {
+    "item": "Mixto",
+    "price": 300,
+    "id":"mixto"
+    },
+    {
+    "item": "Jumbo",
+    "price": 350,
+    "id":"jumbo"
+    }]

@@ -1,25 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {BrowserRouter, Route} from 'react-router-dom';
+import './css/style.css';
+import Navbar from './components/navbar';
+import Home from './components/home';
+import ShowMenu from './components/menu';
+import Combos from './components/combos';
+// import Counter from './components/counter';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Navbar name="Mariscos Selectos Perico" /> 
+        {/* <Route to="/" component={Home}/>*/}
+        <Route exact path="/" render={() => <Home title="Platillos" />} />
+        <Route path="/menu" render={() => <ShowMenu />} /> 
+        <Route path="/combos" render={() => <Combos />} />
+      </div>
+    </BrowserRouter>
   );
 }
 
