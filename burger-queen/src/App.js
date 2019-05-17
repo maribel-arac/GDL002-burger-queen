@@ -4,7 +4,7 @@ import './css/style.css';
 import Navbar from './components/navbar';
 import Home from './components/home';
 import ShowMenu from './components/menu';
-import Combos from './components/combos';
+import ShowCombos from './components/combos';
 // import Counter from './components/counter';
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
         {/* <Route to="/" component={Home}/>*/}
         <Route exact path="/" render={() => <Home title="Platillos" />} />
         <Route path="/menu" render={() => <ShowMenu />} /> 
-        <Route path="/combos" render={() => <Combos />} />
+       <Route path="/combos" render={() => <ShowCombos />} />
       </div>
     </BrowserRouter>
   );

@@ -1,40 +1,40 @@
 [{
         "item": "Ceviche de camarón",
         "sabores": null,
-        "cantidad": "un kilo",
-        "price": [260],
+        "cantidad": ["un kilo", "medio kilo"],
+        "price": [260, 130],
         "id": "camaron-cev",
         "image": "https://recetasfaciles.mx/wp-content/uploads/2015/02/Ceviche-de-camar%C3%B3n.jpg"
     },
     {
         "item": "Ceviche de pescado",
         "sabores": null,
-        "cantidad": "un kilo",
-        "price": [130],
+        "cantidad": ["un kilo", "medio kilo"],
+        "price": [130, 70],
         "id": "pescado-cev",
         "image": "https://recetas-mexicanas.com.mx/wp-content/uploads/2014/08/ceviche-sierra.jpg"
     },
     {
         "item": "Aguachile",
         "sabores": null,
-        "cantidad": "un kilo",
-        "price": [240],
+        "cantidad": ["un kilo", "medio kilo"],
+        "price": [240, 130],
         "id": "aguachile",
         "image": "http://hablemosdepeces.com/wp-content/uploads/2018/12/Aguachile-con-camarones.jpg"
     },
     {
         "item": "Coctel camarones",
         "sabores": null,
-        "cantidad": "un kilo",
-        "price": [140],
+        "cantidad": ["un kilo", "medio kilo"],
+        "price": [140, 80],
         "id": "coctel",
         "image": "http://1.bp.blogspot.com/-rfOlW2eJyuE/Vx1fUocjcKI/AAAAAAAAIbc/gMAc2lZ6HocUXb_5Zn2xaZk8m-kSuuFdgCK4B/s1600/P1080009.jpg"
     },
     {
        "item": "Sopa mariscos",
         "sabores": null,
-        "cantidad": "un kilo",
-        "price": [260],
+        "cantidad": ["un kilo", "medio kilo"],
+        "price": [140, 80],
         "id": "sopa",
         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfqjyxsWKN71G9WrZgJUHOsuTIfPasiP5ZxeEEqWdwRCYZE72-"
     },

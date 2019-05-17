@@ -11,12 +11,24 @@ const ShowMenu = props => {
               <img src={menuDetail.image} className="card-img-top" alt="" />
               <div className="card-body">
                 <h5 className="card-title">{menuDetail.item}</h5>
-                <p className="card-text"><ul>{menuDetail.price.map((price) => <li>{"$" +price}</li>)}</ul></p>
+                <p className="card-text"><ul>{menuDetail.price.map((price) => 
+
+                  <div class="form-check">
+                  {"$" + price}
+                  </div>
+                  )}
+                {menuDetail.cantidad.map((amount) =>
+                    <div>
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"/>
+                        <label class="form-check-label" for="defaultCheck1"> <li> {amount} </li></label>
+                    </div>
+                  )}
+                  </ul></p>
                 <button href="#" className="btn btn-primary"> Add +</button>
               </div>
             </div>
             </div>
-            )};
+            )}
         </div>
         </div>
   )
