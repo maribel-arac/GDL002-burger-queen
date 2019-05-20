@@ -1,9 +1,7 @@
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#config-web-app -->
-
+import * as firebase from 'firebase';
 
   // Your web app's Firebase configuration
-  var firebaseConfig = {
+  const firebaseConfig = {
     apiKey: "AIzaSyB8C4Lu3hT4eEKHLzZbpM_og0TBy-iqNMs",
     authDomain: "burgerqueen-a9a26.firebaseapp.com",
     databaseURL: "https://burgerqueen-a9a26.firebaseio.com",
@@ -14,3 +12,4 @@
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
+export default firebase;

@@ -16,7 +16,7 @@ const ShowCombos = props => {
               </div>
             </div>
             </div>
-            )};
+            )}
         </div>
         </div>
   )

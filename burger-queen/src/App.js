@@ -5,7 +5,6 @@ import Navbar from './components/navbar';
 import Home from './components/home';
 import ShowMenu from './components/menu';
 import ShowCombos from './components/combos';
-// import Counter from './components/counter';
 
 function App() {
   return (
