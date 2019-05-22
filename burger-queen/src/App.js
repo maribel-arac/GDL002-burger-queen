@@ -13,7 +13,7 @@ function App() {
         <Navbar name="Mariscos Selectos Perico" /> 
         {/* <Route to="/" component={Home}/>*/}
         <Route exact path="/" render={() => <Home title="Platillos" />} />
-        <Route path="/menu" render={() => <ShowMenu />} /> 
+        <Route path="/menu" component={ShowMenu} /> 
        <Route path="/combos" render={() => <ShowCombos />} />
       </div>
     </BrowserRouter>

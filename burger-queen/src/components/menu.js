@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import firebase from "../Firebase/initializeFirebase";
 import Menu from "../data/menu.json";
 // import Counter from "../components/counter";
+import Order from "../components/orders";
 
 class ShowMenuWithFb extends Component {
   constructor() {
@@ -13,8 +14,19 @@ class ShowMenuWithFb extends Component {
     };
   }
 
+  submit(item, amount, cost){ //muestra la comanda
+    const orderMenu ={
+      item: item,
+      amount: amount, 
+      price: cost
+    }
+    this.setState({
+      ordenes:[...this.state.ordenes,orderMenu]
+    })
+  }
+
   componentDidMount() {
-    const MenuRef = firebase.database().ref("Menu");
+    const MenuRef = firebase.database().ref("Menu"); //este llama los datos de FB
     MenuRef.on("value", snapshot => {
       let menus1 = snapshot.val();
       let newStateMenu = [];
@@ -29,18 +41,18 @@ class ShowMenuWithFb extends Component {
         });
       }
       this.setState({
-        menu: newStateMenu
+        menu: newStateMenu //aqui es donde se guarda en el estado lo que FB manda
       });
     });
   }
 
   render() {
     return (
-      <div className="row">
-        <div className="col-sm-4">
-          {this.state.menu.map((
-            menuDetail //en map va el nombre del import de json
-          ) => (
+        <div class="container">
+          <div class="row">
+
+        <div className="col-md-6">
+          {this.state.menu.map((menuDetail, i) => ( //en map va el nombre del import de json
             <div className="card">
               <div className="card-body">
                 <img src={menuDetail.image} className="card-img-top" alt="" />
@@ -50,31 +62,32 @@ class ShowMenuWithFb extends Component {
                   <ul>
                     {menuDetail.amount.map((quantity, price) => (
                       <div>
-                        <div className="form-check" />
-                        <input
-                          className="form-check-input"
-                          type="checkbox"
-                          value=""
-                          id="defaultCheck1"
-                        />
-                        <label className="form-check-label" for="defaultCheck1">
-                          {" "}
-                          <li>
+        
+                          <button className="btn btn-primary btn-lg col-md-12" onClick={()=> {
+                this.submit(menuDetail.item, menuDetail.amount[quantity], menuDetail.price[price])}} 
+                type="submit">
                             {" "}
                             {quantity + " " + "$" + menuDetail.price[price]}
-                          </li>
-                        </label>
+
+                          </button>
+                       
                       </div>
                     ))}
                   </ul>
 
-                  { /*<Counter /> */ }
                 </div>
               </div>
             </div>
           ))}
         </div>
-      </div>
+              <div class="col">
+              <Order menuOrder={this.state.ordenes} /> 
+            </div>
+            </div>
+            
+          </div>
+                
+       
     );
   }
 }
