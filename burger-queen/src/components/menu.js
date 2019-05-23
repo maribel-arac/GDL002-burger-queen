@@ -53,6 +53,7 @@ class ShowMenuWithFb extends Component {
 
         <div className="col-md-6">
           {this.state.menu.map((menuDetail, i) => ( //en map va el nombre del import de json
+
             <div className="card">
               <div className="card-body">
                 <img src={menuDetail.image} className="card-img-top" alt="" />
@@ -60,14 +61,14 @@ class ShowMenuWithFb extends Component {
                   <h5 className="card-title">{menuDetail.item}</h5>
                   <p className="card-text" />
                   <ul>
-                    {menuDetail.amount.map((quantity, price) => (
+                    {menuDetail.amount.map((quantity, index) => (
                       <div>
         
                           <button className="btn btn-primary btn-lg col-md-12" onClick={()=> {
-                this.submit(menuDetail.item, menuDetail.amount[quantity], menuDetail.price[price])}} 
+                this.submit(menuDetail.item, menuDetail.amount[index], menuDetail.price[index])}} 
                 type="submit">
                             {" "}
-                            {quantity + " " + "$" + menuDetail.price[price]}
+                            {quantity + " " + "$" + menuDetail.price[index]}
 
                           </button>
                        

@@ -13,6 +13,17 @@ class ShowMenuWithFb extends Component {
 		};
 	}
 
+	submit(item,amount,cost){
+		const orderMenu = {
+			item:item,
+			amount:amount,
+			price: cost
+		}
+		this.setState({
+			ordenes:[...this.state.ordenes, orderMenu]
+		})
+	}
+
 	componentDidMount() {
 		const MenuRef = firebase.database().ref("Paquetes");
 		MenuRef.on("value", snapshot => {
@@ -45,6 +56,8 @@ class ShowMenuWithFb extends Component {
 									className="card-img-top"
 									alt=""
 								/>
+
+								
 								<div className="card-body">
 									<h5 className="card-title">
 										{combosDetail.item}
