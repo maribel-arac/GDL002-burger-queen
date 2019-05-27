@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import firebase from "../Firebase/initializeFirebase";
 import Menu from "../data/menu.json";
-// import Counter from "../components/counter";
 import Order from "../components/orders";
 
 class ShowMenuWithFb extends Component {
@@ -10,8 +9,13 @@ class ShowMenuWithFb extends Component {
     this.state = {
       menu: [],
       paquetes: [],
-      ordenes: []
+      ordenes: [],
+      total: 0
     };
+
+    this.submit = this.submit.bind(this);
+    this.deleteLine = this.deleteLine.bind(this);
+    this.sumTotalOrder = this.sumTotalOrder.bind(this)
   }
 
   submit(item, amount, cost){ //muestra la comanda
@@ -45,6 +49,27 @@ class ShowMenuWithFb extends Component {
       });
     });
   }
+
+  //suma los items en la comanda
+  sumTotalOrder () {
+        const priceArray = this.state.ordenes.map((el) => el.price)
+        const items = priceArray.reduce((sum,result)=>{
+            return sum + result;
+        });
+        this.setState({
+            total: items
+        });
+    };
+
+
+// //borra item en la comanda
+  deleteLine(e, menu) {
+            e.preventDefault(e)
+            this.setState(prevState => ({
+                ordenes: prevState.ordenes.filter(element => element != menu )
+            }));
+          }
+
 
   render() {
     return (
@@ -82,11 +107,12 @@ class ShowMenuWithFb extends Component {
           ))}
         </div>
               <div class="col">
-              <Order menuOrder={this.state.ordenes} /> 
-            </div>
-            </div>
-            
+                <Order menuOrder={this.state.ordenes} handleDelete={this.deleteLine} />
+                <button className="btn btn-primary" onClick={this.sumTotalOrder}> Total: $ {this.state.total} </button> 
+              </div>
           </div>
+            
+        </div>
                 
        
     );
