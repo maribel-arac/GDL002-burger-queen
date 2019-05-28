@@ -1,0 +1,57 @@
+[{
+        "item": "Ceviche de camarón",
+        "speciality": null,
+        "amount": ["un kilo", "medio kilo"],
+        "price": [260, 130],
+        "id": "camaron-cev",
+        "image": "https://recetasfaciles.mx/wp-content/uploads/2015/02/Ceviche-de-camar%C3%B3n.jpg"
+    },
+    {
+        "item": "Ceviche de pescado",
+        "speciality": null,
+        "amount": ["un kilo", "medio kilo"],
+        "price": [130, 70],
+        "id": "pescado-cev",
+        "image": "https://recetas-mexicanas.com.mx/wp-content/uploads/2014/08/ceviche-sierra.jpg"
+    },
+    {
+        "item": "Aguachile",
+        "speciality": null,
+        "amount": ["un kilo", "medio kilo"],
+        "price": [240, 130],
+        "id": "aguachile",
+        "image": "http://hablemosdepeces.com/wp-content/uploads/2018/12/Aguachile-con-camarones.jpg"
+    },
+    {
+        "item": "Coctel camarones",
+        "speciality": null,
+        "amount": ["un kilo", "medio kilo"],
+        "price": [140, 80],
+        "id": "coctel",
+        "image": "http://1.bp.blogspot.com/-rfOlW2eJyuE/Vx1fUocjcKI/AAAAAAAAIbc/gMAc2lZ6HocUXb_5Zn2xaZk8m-kSuuFdgCK4B/s1600/P1080009.jpg"
+    },
+    {
+       "item": "Sopa mariscos",
+        "speciality": null,
+        "amount": ["un kilo", "medio kilo"],
+        "price": [140, 80],
+        "id": "sopa",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfqjyxsWKN71G9WrZgJUHOsuTIfPasiP5ZxeEEqWdwRCYZE72-"
+    },
+    {
+        "item": "Filete al gusto",
+        "speciality": ["empanizado", "ajillo", "ajo"],
+        "price": [190, 150, 115, 70],
+        "amount":["4pzs", "3pzs","2pzs","1pz"],
+        "id": "filete",
+        "image": "http://www.wikichef.net/webapp/img/recipes/5a83eb_fishchipsbydianejuly2011-fb_w1000.jpg"
+    },
+    {
+        "item": "Camarón al gusto",
+        "speciality": ["empanizado","ajillo","ajo"],
+        "amount":["un kilo", "medio kilo"],
+        "price": [360, 205],
+        "id": "camaron",
+        "image": "http://lacolonia.hn/assets/Uploads/_resampled/SetWidth300-receta-camarones-empanizados.jpg"
+    }
+]

@@ -1,0 +1,24 @@
+[{
+    "item": "#1 De litro",
+    "price": 250,
+    "id":"liter",
+    "image": "https://recetas-mexicanas.com.mx/wp-content/uploads/2014/08/ceviche-sierra.jpg"
+    },
+    {
+    "item": "#2 Familiar",
+    "price": 250,
+    "id":"familiar",
+    "image": "http://www.wikichef.net/webapp/img/recipes/5a83eb_fishchipsbydianejuly2011-fb_w1000.jpg"
+    },
+    {
+    "item": "#3 Mixto",
+    "price": 300,
+    "id":"mixto",
+    "image": "http://hablemosdepeces.com/wp-content/uploads/2018/12/Aguachile-con-camarones.jpg"
+    },
+    {
+    "item": "#4 Jumbo",
+    "price": 350,
+    "id":"jumbo",
+    "image": "http://lacolonia.hn/assets/Uploads/_resampled/SetWidth300-receta-camarones-empanizados.jpg"
+    }]
