@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import firebase from "../Firebase/initializeFirebase";
-import Menu from "../data/menu.json";
+// import Menu from "../data/menu.json";
 import Order from "../components/orders";
 
 class ShowMenuWithFb extends Component {
@@ -78,7 +78,6 @@ class ShowMenuWithFb extends Component {
 
         <div className="col-md-6">
           {this.state.menu.map((menuDetail, i) => ( //en map va el nombre del import de json
-
             <div className="card">
               <div className="card-body">
                 <img src={menuDetail.image} className="card-img-top" alt="" />

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import firebase from "../Firebase/initializeFirebase";
 // import Paquetes from '../data/paquetes.json';
 // import Counter from "../components/counter";
-import Order from "../components/orders";
+import OrderCombos from "../components/orderCombos";
 
 class ShowMenuWithFb extends Component {
 	constructor() {
@@ -19,10 +19,9 @@ class ShowMenuWithFb extends Component {
     	this.sumTotalOrder = this.sumTotalOrder.bind(this)
 	}
 
-	submit(item,amount,cost){
+	submit(item,cost){
 		const orderMenu = {
 			item:item,
-			amount:amount,
 			price: cost
 		}
 		this.setState({
@@ -86,8 +85,9 @@ class ShowMenuWithFb extends Component {
 
 								
 								<button className="btn btn-primary btn-lg col-md-12" onClick={() => {
-									this.submit(combosDetail.item, combosDetail.price[index])
-								}} type="submit">
+									this.submit(combosDetail.item, combosDetail.price);
+									}
+								} type="submit">
 
 									<h5 className="card-title">
 										{combosDetail.item}
@@ -103,7 +103,7 @@ class ShowMenuWithFb extends Component {
 				</div>
 
 					<div className="col">
-                		<Order menuOrder={this.state.ordenes} handleDelete={this.deleteLine} />
+                		<OrderCombos menuOrder={this.state.ordenes} handleDelete={this.deleteLine} />
                 		<button className="btn btn-primary" onClick={this.sumTotalOrder}> Total: $ {this.state.total} </button> 
               		</div>
 			</div>
