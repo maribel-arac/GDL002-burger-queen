@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import firebase from "../Firebase/initializeFirebase";
-// import Menu from "../data/menu.json";
-import Order from "../components/orders";
+import OrderMenu from "../components/ordersMenu";
+import BtnOrderKitchen from "../components/btnkitchen";
 
 class ShowMenuWithFb extends Component {
   constructor() {
@@ -73,8 +73,8 @@ class ShowMenuWithFb extends Component {
 
   render() {
     return (
-        <div class="container">
-          <div class="row">
+        <div className="container">
+          <div className="row">
 
         <div className="col-md-6">
           {this.state.menu.map((menuDetail, i) => ( //en map va el nombre del import de json
@@ -105,9 +105,10 @@ class ShowMenuWithFb extends Component {
             </div>
           ))}
         </div>
-              <div class="col">
-                <Order menuOrder={this.state.ordenes} handleDelete={this.deleteLine} />
-                <button className="btn btn-primary" onClick={this.sumTotalOrder}> Total: $ {this.state.total} </button> 
+              <div className="col">
+                <OrderMenu menuOrder={this.state.ordenes} handleDelete={this.deleteLine} />
+                <button className="btn btn-primary " onClick={this.sumTotalOrder}> Total: $ {this.state.total} </button>
+                <BtnOrderKitchen orders = {this.state.ordenes}  />  
               </div>
           </div>
             
