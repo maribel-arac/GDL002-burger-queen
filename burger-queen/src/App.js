@@ -5,6 +5,7 @@ import Navbar from './components/navbar';
 import Home from './components/home';
 import ShowMenu from './components/menu';
 import ShowCombos from './components/combos';
+import Kitchen from './components/kitchen';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route exact path="/" render={() => <Home title="Platillos" />} />
         <Route path="/menu" component={ShowMenu} /> 
        <Route path="/combos" render={() => <ShowCombos />} />
+       <Route path="/kitchen" render={() => <Kitchen />} />
       </div>
     </BrowserRouter>
   );
