@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import firebase from "../Firebase/initializeFirebase";
-// import Paquetes from '../data/paquetes.json';
-// import Counter from "../components/counter";
 import OrderCombos from "../components/orderCombos";
+import BtnOrderKitchen from "../components/btnkitchen";
 
 class ShowMenuWithFb extends Component {
 	constructor() {
@@ -104,7 +103,8 @@ class ShowMenuWithFb extends Component {
 
 					<div className="col">
                 		<OrderCombos menuOrder={this.state.ordenes} handleDelete={this.deleteLine} />
-                		<button className="btn btn-primary" onClick={this.sumTotalOrder}> Total: $ {this.state.total} </button> 
+                		<button className="btn btn-primary" onClick={this.sumTotalOrder}> Total: $ {this.state.total} </button>
+                		<BtnOrderKitchen orders = {this.state.ordenes}  /> 
               		</div>
 			</div>
 		);
